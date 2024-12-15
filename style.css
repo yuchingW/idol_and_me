@@ -245,11 +245,6 @@ video {
     opacity: 1;
 }
 
-#jp-kr {
-    background-color: rgb(236, 236, 236);
-    padding: 0;
-}
-
 /* 轉場點燈 */
 #trans {
     position: relative;
