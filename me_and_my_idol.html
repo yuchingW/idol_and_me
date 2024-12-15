@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 標題待改 -->
+    <title>拜託月老，請帶我去看演唱會！</title>
+    <!-- boostrap and link to css file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Opening -->
+    <section id="opening">
+        <div class="open-v sticky-top">
+            <video id="fullScreenVideo" autoplay muted playsinline>
+                <source src="./video/web-banner.mp4" type="video/mp4">
+                您的瀏覽器不支援 HTML5 影片標籤。
+            </video>
+        </div>
+
+        <div id="title" class="fade-in row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-7">
+                <h2>台灣月老隱藏「神」秘力量　追星產業鏈如何凝聚彼此？</h2>
+                <h4>追星是一場以愛為名的雙向奔赴</h4>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <!-- 加入置頂進度條 -->
+
+    <!-- Introduction -->
+    <section id="intro" style="height: 200vh;">
+        <div class="intro sticky-top bg" style="background-image: url(./image/tample.jpg);">
+            <div class="intro sticky-top bg" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-7" style="color: white">
+                <p>走進香火鼎盛的龍山寺，這裡不僅是觀光客必訪景點，更供奉著口耳相傳相當靈驗的月老。</p>
+                <p>然而，在月老神像前的供桌上，不同以往出現許多偶像小卡與演唱會座位圖。</p>
+                <p>這是近期流傳於追星族群的新現象：藉由拜月老祈求能購買到理想的門票，甚至只為能親眼見到偶像一面。</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </section>
+
+
+
+    <!-- First section: introduce caulture-->
+    <section id="culture" class="sticky-container">
+        <div class="sticky-content">
+            <div id="C-title" class="C-title">
+                <h1>拜月老該準備什麼？</h1>
+            </div>
+            <!-- 座位表 -->
+            <div id="seat" class="plate-item">
+                <img src="./image/seat.png" alt="seat">
+                <div id="seat-content" class="content-block">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-7">
+                            <h1>理想座位清單</h1>
+                            <p>傳統上，參拜月老求正緣時，人們總是詳細列下自己的「理想型」條件。</p>
+                            <p>然而，粉絲們為了搶到更好、能夠近距離觀看心愛偶像的好位子，詳細列下想要購買的座位清單和優先順序。</p>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 點心 -->
+            <div id="dessert" class="plate-item">
+                <img src="./image/dessert.png" alt="cookies">
+                <div id="dessert-content" class="content-block">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-7">
+                            <h1>吃甜甜還要「乖乖」</h1>
+                            <p>許多粉絲除了準備月老愛吃的巧克力、甜食之外，也會特別準備乖乖「造句包」。</p>
+                            <p>寫上搶票系統、演唱會名稱，向月老借力，祈求搶票當天一切順利。</p>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 小卡 -->
+            <div id="cards" class="plate-item">
+                <img src="./image/cards.png" alt="cards">
+                <div id="cards-content" class="content-block">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-7">
+                            <h1>幸運數字「三」</h1>
+                            <p>在韓國飯圈中流傳一個都市傳說。</p>
+                            <p>韓團「Shinee」成員之一的泰民，每一次許許願都能成真，被粉絲們認為是幸運的象徵。</p>
+                            <p>也因此，每當需要「運氣」的場合，粉絲都會準備三張偶像小卡，或在默念三次泰民，祈禱幸運之神眷顧。</p>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 盤子 -->
+            <div id="plate" class="plate-item"></div>
+        </div>
+    </section>
+
+
+    <div id="trans_pic" style="height: 200vh;">
+        <div class="bg sticky-top" style="height: 100vh; z-index: -1; background-image: url(./image/table.png);"></div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6" style="background-color: rgba(0, 0, 0, 0.444); color: white;">
+                <p></p>
+                <p>除了龍山寺，霞海城隍廟月老及圓山保安宮土地公都是粉絲們求票的首選。</p>
+                <p>在準備供品時，粉絲們一樣會準備雙數的粉色甜品或巧克力，不同以往的是會印下演唱會座位圖，寫下自己的資訊及想購買的位置。</p>
+                <p>為了見偶像一面，而祈求「神」秘力量，並非是台灣粉絲首創。最早社群流傳拜月老求票是源於韓團Stray Kids 2024年6月的演唱會，其實在日本與韓國都有粉絲們趨之若鶩的神社與寺廟。</p>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+    <!-- Second section: jp and kr calture -->
+    <section id="jp-kr" style="height: 400vh;">
+        <div class="container-fluid">
+            <div id = "jp" class="row">
+                 <div class="col-sm-1"></div>
+                <div class="col-sm-5 sticky-left">
+                    <div id="jp-text">
+                        <h1>日本　皆中神社</h1>
+                        <p>東京新宿的「皆中稻荷神社」即是許多粉絲求票必去的神社，特別是因為日本演唱會多採抽選制，也讓「祈求好運」的皆中稻荷神社逐漸得到關注。</p>
+                        <p>在能寫下願望的繪馬上方印有紅箭正中靶心，象徵所求願望都能順利命中，這也讓粉絲能夠留下想參與演唱會的資訊。</p>
+                    </div>
+                </div>
+
+                <div id = "jp-img" class="col-sm-5 scroll-images">
+                    <div class="image-box" style = "background-image: url(./image/jp-card.jpg);"></div>
+                    <div class="image-box" style = "background-image: url(./image/jp-card.jpg);"></div>
+                </div>
+                <div col = "col-sm-1"></div>
+            </div>
+
+            <div id = "kr" class="row">
+                <div class = "col-sm-1"></div>
+                <div class="col-sm-5 sticky-left">
+                    <div id="kr-text">
+                        <h1>韓國　奉恩寺</h1>
+                        <p>南韓奉恩寺則是韓國追星族群都會造訪的寺廟。</p>
+                        <p>有別於台灣參拜方式，到奉恩寺參拜會以白米或紅豆祭拜，粉絲還會購買蠟燭，點燃寫滿願望並署名的蠟燭能幫助粉絲心想事成。</p>
+                        <p>不僅如此，由於seventeen成員淨漢曾佩戴奉恩寺的祈願手鏈，也成為粉絲到訪必買的小物。</p>
+                    </div>
+                </div>
+
+                <div id="kr-img" class="col-sm-5 scroll-images">
+                    <div class="image-box" style = "background-image: url(./image/kr-tample.jpg);"></div>
+                    <div class="image-box" style = "background-image: url(./image/kr-candle.jpg);"></div>
+                </div>
+                <div class = "col-sm-1"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second paragraph: fans -->
+    <div id="thread-post" class="sticky-top" style="height: 100vh; background-color: black">
+        <!-- 粉絲求票動畫 -->
+    </div>
+
+    <section id="fans-content01" style="height: 1000vh;">
+        <div class="container-fluid">
+            <!-- 第一段 -->
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5 sticky-left">
+                    <div class="paragraph">
+                        <h1>空中飛人　悠悠</h1>
+                        <p>手腕上掛滿奉恩寺手鏈的女孩，是入坑seventeen2年多的優優，當他掐指計算著今年出入境次數，才驚覺他有7個月的時間曾飛離台灣。</p>
+                        <p>就連一起追星的Pone都十分肯定地說，「他（優優）就是追最瘋的！」</p>
+                    </div>
+                </div>
+                <div class="col-sm-5 scroll-images">
+                    <div class="image-box" style="background-image: url('./image/yoyo_1.jpg');"></div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+    
+            <!-- 第二段 -->
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5 sticky-left">
+                    <div class="paragraph">
+                        <p>優優除了追演唱會，如果有時間一定也會去抽和偶像見面的簽售。他透露，要想被抽中能進到簽售會，不能只購買一般專輯，還得特別買「簽售專輯」。為了確保能被中選，優優會先到中國網站購買情報，了解保底張數。優優舉例，以一張簽售專輯約7百元的價格，他就曾買過超過1百張。</p>
+                        <p>簽售即是能和偶像對話2分鐘，所有成員在會場一字排開，有專屬的隔間。優優透露，上次簽售會見到淨漢時，剛好碰上自己的生日，他特別身穿淨漢推出的聯名浴袍，手捧生日蛋糕請偶像祝他生日快樂。他補充，雖然簽售看似能和偶像面對面互動2分鐘，但那短暫的120秒內包含架設腳架紀錄全程，為此他努力爬文看過往粉絲的經驗，讓他能快狠準拍攝讓他幸福的畫面。</p>
+                    </div>
+                </div>
+                <div class="col-sm-5 scroll-images">
+                    <div class="image-box" style="background-image: url('./image/yoyo_tick.png');"></div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+    
+            <!-- 第三段 -->
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5 sticky-left">
+                    <div class="paragraph">
+                        <p>除了積極參與seventeen的活動外，「踩點」也是優優經常做的。</p>
+                        <p>最遠的一次，只是因為偶像到義大利拍攝綜藝節目，他也飛到當地，舉起手幅在比薩斜塔、羅馬競技場等節目中，成員們走訪過的景點前應援。</p>
+                    </div>
+                </div>
+                <!-- Italy images -->
+                <div class="col-sm-5 scroll-images">
+                    <div class="image-box" style="background-image: url('./image/ita01.png');"></div>
+                    <div class="image-box" style="background-image: url('./image/ita02.png');"></div>
+                    <div class="image-box" style="background-image: url('./image/ita03.png');"></div>
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
+
+            <!-- 第四段 -->
+            <div id="fans-content04" style="height: 400vh; padding: 0;">
+                <div class="bg sticky-top" style="height: 200vh; background-image: url('./image/yoyo_bg.png');">
+                    <div class="overlay sticky-top" style="height: 100vh; background-color: rgba(0, 0, 0, 0.2);"></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6" style="background-color: rgba(236, 236, 236, 0.5);color: rgb(0, 0, 0); margin-top: 50px;">
+                        <p>回想起追星的契機，優優提到，由於排班制的工作，晝伏夜出成為常態，與身旁朋友截然不同的作息使他彷彿瞬間失去所有社交。</p>
+                        <p>這時，seventeen憑著高超的唱跳實力、反差有趣的團體綜藝節目及疫情期間用心的線上演唱會，如同深夜的一股暖意，填補孤獨的心靈。</p>
+                        <p>疫情結束後，優優就展開「空中飛人」的生活。飛到菲律賓、南韓與日本看演唱會成了家常便飯。他很感謝自己瘋狂的追星之舉從未獲得家人的阻礙，也自嘲所有的薪水都拿來養偶像了。</p>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="fans-content02" class="bg content row sticky-top"
+        style="height: 300vh; background-color:khaki ;color: black;">
+        <!-- long font的文字滾動 -->
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <h2>粉絲故事二</h2>
+            <p>text text text</p>
+        </div>
+        <div class="col-sm-3"></div>
+    </section>
+
+    <!-- Third paragraph: fans and host -->
+    <div id="trans_concert" class="video sticky-top" style="height: 100vh; background-color: black; color: white;">
+        <p>演唱會點燈的影片</p>
+        <!-- 加入影片：演唱會現場點燈的影片-->
+    </div>
+
+    <!-- Third section: fans and host -->
+    <!-- 樂童（如果需要素材我再去ig截圖或是找找我的手機裡的東西xd） -->
+    <div id="fans-content03" class="bg content row sticky-top"
+        style="height: 300vh; background-color:bisque; color:black;">
+        <!-- 左右互搏格式（可以照搬fans-content01的部分，然後改成要放的內容） -->
+        <div class="col-sm-6">
+            <h2>應援故事一</h2>
+            <p>text text text</p>
+        </div>
+        <div class="col-sm-6">
+            <h2>應援照片</h2>
+            <p>pic pic pic</p>
+        </div>
+    </div>
+
+    <div id="fans-content04" class="bg content row sticky-top"
+        style="height: 300vh; background-color:khaki ; color: black;">
+        <!-- long font的文字滾動 -->
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <h2>應援故事二</h2>
+            <p>text text text</p>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <!-- Fourth paragraph: ending part -->
+    <!-- 這個可能比較複雜我晚點做 -->
+    <div id="ending" class="video sticky-top" style="height: 100vh; background-color: dimgray; color: white;">
+        <p>演唱會結束的影片</p>
+        <!-- 加入影片：演唱會結束的影片-->
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>文字／楊子瑩</p>
+        <p>設計／王昱晴、胡婷涵</p>
+        <p>網頁工程／王昱晴</p>
+        <p>&copy; 2024 網頁設計與敘事</p>
+    </div>
+
+
+    <!-- JS and boostrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
