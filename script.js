@@ -83,6 +83,109 @@ $(document).ready(function () {
     handleScroll();
 });
 
+// 左右互搏的function
+(function($) {
+    $.fn.scrollReveal = function(options) {
+        // 預設參數
+        var settings = $.extend({
+            // 觸發顯示的視窗高度比例（預設80%）
+            triggerRatio: 0.8,
+            // 是否開啟淡入效果
+            fadeEffect: true,
+            // 淡入時間（毫秒）
+            duration: 500,
+            // 是否只顯示一次
+            once: false
+        }, options);
+
+        // 為每個匹配的元素設置效果
+        return this.each(function() {
+            var $images = $(this).find('.scroll-images .image-box');
+            var revealed = [];
+
+            // 初始化：隱藏所有圖片
+            if (settings.fadeEffect) {
+                $images.css({
+                    'opacity': '0',
+                    'transition': 'opacity ' + settings.duration + 'ms ease-in-out'
+                });
+            }
+
+            // 滾動事件處理函數
+            function checkVisibility() {
+                var windowHeight = $(window).height();
+                var scrollTop = $(window).scrollTop();
+
+                $images.each(function(index) {
+                    var $image = $(this);
+                    var imageTop = $image.offset().top;
+                    var imageHeight = $image.height();
+
+                    // 判斷圖片是否在可視範圍
+                    var isInView = 
+                        imageTop < scrollTop + windowHeight * settings.triggerRatio && 
+                        imageTop + imageHeight > scrollTop;
+
+                    // 如果尚未顯示過，或不要求只顯示一次
+                    if (isInView && (!settings.once || !revealed[index])) {
+                        $image.css('opacity', '1');
+                        revealed[index] = true;
+                    } else if (!isInView && !settings.once) {
+                        $image.css('opacity', '0');
+                    }
+                });
+            }
+
+            // 綁定滾動事件
+            $(window).on('scroll resize', checkVisibility);
+            
+            // 初始檢查
+            checkVisibility();
+        });
+    };
+})(jQuery);
+
+// 日韓
+$(document).ready(function() {
+    // 呼叫function
+    $('#jp-kr').scrollReveal({
+        triggerRatio: 0.8,   // 可調整觸發位置
+        fadeEffect: true,    // 啟用淡入效果
+        duration: 500,       // 淡入時間
+        once: false          // 是否只顯示一次
+    });
+});
+
+// 優優
+$(document).ready(function() {
+    $('#yoyo').scrollReveal({
+        triggerRatio: 0.8,
+        fadeEffect: true,    
+        duration: 500,   
+        once: false     
+    });
+});
+
+// AKMU
+$(document).ready(function() {
+    $('#akmu').scrollReveal({
+        triggerRatio: 0.8,
+        fadeEffect: true,    
+        duration: 500,   
+        once: false     
+    });
+});
+
+// wei
+$(document).ready(function() {
+    $('#wei').scrollReveal({
+        triggerRatio: 0.8,
+        fadeEffect: true,    
+        duration: 500,   
+        once: false     
+    });
+});
+
 // 轉場點燈
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -98,18 +201,18 @@ $(document).ready(function () {
         // 計算滾動進度
         const scrollProgress = (scrollPosition - sectionTop) / (sectionHeight - windowHeight);
 
-        // 控制文字透明度和顯示
-        if (scrollProgress >= 0.2 && scrollProgress <= 0.3) {
+        // 修改判斷邏輯，擴大觸發範圍
+        if (scrollProgress >= 0 && scrollProgress <= 0.5) {
             $transText.addClass('active'); // 顯示文字
         } else {
             $transText.removeClass('active'); // 隱藏文字
         }
 
-        // 控制背景透明度變化
+        // 控制背景透明度變化（保持原邏輯）
         if (scrollProgress >= 0.3 && scrollProgress <= 0.5) {
             const opacityValue = (scrollProgress - 0.3) / 0.2; // 將 0.3~0.5 映射到 0~1
             $concertLight.css('opacity', opacityValue);
-        } else if (scrollProgress < 0.5) {
+        } else if (scrollProgress < 0.3) {
             $concertLight.css('opacity', 0);
         } else {
             $concertLight.css('opacity', 1);

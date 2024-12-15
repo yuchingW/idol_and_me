@@ -40,9 +40,9 @@ video {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);  /* 置中 */
-    width: 100%;                     /* 覆蓋父容器 */
-    height: auto;                    /* 自動調整高度來匹配寬度 */
-    object-fit: cover;               /* 保證影片覆蓋整個容器，且維持長寬比 */
+    width: 100%;                
+    height: auto;                  
+    object-fit: cover;             
 }
 
 #title {
@@ -197,6 +197,18 @@ video {
 #plate { z-index: 1; }
 
 /* 左右互搏 */
+.p-title {
+    padding-left: 90px;
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+
+.p-content {
+    padding-left: 90px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .sticky-left {
     position: sticky;
     top: 0;
@@ -225,39 +237,47 @@ video {
     text-align: center;
     background-size: cover;
     background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* jp kr cal*/
+.image-box.visible {
+    opacity: 1;
+}
+
 #jp-kr {
     background-color: rgb(236, 236, 236);
     padding: 0;
 }
 
-/* trans to host */
+/* 轉場點燈 */
+#trans {
+    position: relative;
+}
+
 #trans-text {
-    position: absolute;
+    position: fixed; /* 改為 fixed 定位 */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0; /* 初始透明度 */
-    transition: opacity 0.5s ease-in-out; /* 漸變動畫 */
-    color: black;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: white; /* 修改為白色以匹配背景 */
     z-index: 10;
+    text-align: left;
+    width: 80%;
+    padding: 40px;
 }
 
 #trans-text.active {
-    opacity: 1; /* 滾動進入時變得可見 */
-}
-
-#concert_light {
-    transition: opacity 0.5s ease-in-out; /* 背景透明度漸變 */
+    opacity: 1;
 }
 
 
 /* footer */
 .footer {
     position: relative;
-    height: 250px;
+    height: 40vh;
     background-color: black;
     color: white;
     justify-content: center;
