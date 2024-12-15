@@ -1,8 +1,11 @@
 # idol_and_me
 
 html寫在 me_and_my_idol.html 裡面
+
 css 寫在 style.css
+
 javaScript 寫在 script.js
+
 
 ## 需要大家協助的部份
 1. section id = "fans-content03" 這是要寫應援粉絲（樂童）的part
