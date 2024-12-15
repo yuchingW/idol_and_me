@@ -14,7 +14,7 @@ html, body {
 .bg {
     position: relative;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     z-index: -1;
 }
 
@@ -232,6 +232,27 @@ video {
     background-color: rgb(236, 236, 236);
     padding: 0;
 }
+
+/* trans to host */
+#trans-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* 初始透明度 */
+    transition: opacity 0.5s ease-in-out; /* 漸變動畫 */
+    color: black;
+    z-index: 10;
+}
+
+#trans-text.active {
+    opacity: 1; /* 滾動進入時變得可見 */
+}
+
+#concert_light {
+    transition: opacity 0.5s ease-in-out; /* 背景透明度漸變 */
+}
+
 
 /* footer */
 .footer {

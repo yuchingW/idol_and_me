@@ -83,3 +83,38 @@ $(document).ready(function () {
     handleScroll();
 });
 
+// 轉場點燈
+$(document).ready(function () {
+    $(window).scroll(function () {
+        const $transSection = $('#trans');
+        const $transText = $('#trans-text');
+        const $concertLight = $('#concert_light');
+
+        const scrollPosition = $(window).scrollTop();
+        const sectionTop = $transSection.offset().top;
+        const sectionHeight = $transSection.height();
+        const windowHeight = $(window).height();
+
+        // 計算滾動進度
+        const scrollProgress = (scrollPosition - sectionTop) / (sectionHeight - windowHeight);
+
+        // 控制文字透明度和顯示
+        if (scrollProgress >= 0.2 && scrollProgress <= 0.3) {
+            $transText.addClass('active'); // 顯示文字
+        } else {
+            $transText.removeClass('active'); // 隱藏文字
+        }
+
+        // 控制背景透明度變化
+        if (scrollProgress >= 0.3 && scrollProgress <= 0.5) {
+            const opacityValue = (scrollProgress - 0.3) / 0.2; // 將 0.3~0.5 映射到 0~1
+            $concertLight.css('opacity', opacityValue);
+        } else if (scrollProgress < 0.5) {
+            $concertLight.css('opacity', 0);
+        } else {
+            $concertLight.css('opacity', 1);
+        }
+    });
+});
+
+
